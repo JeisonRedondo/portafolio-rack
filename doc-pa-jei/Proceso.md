@@ -7,7 +7,3 @@ Bueno, react es el centro de la aplicación ya que esta nos permite generar reac
 ```bash
 npm install react react-dom
 ```
-
-```
-
-```
