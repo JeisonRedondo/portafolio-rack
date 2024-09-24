@@ -1,12 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
-const root = React.createRoot(document.getElementbyId("root"));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 
 function App() {
   return (
     <div>
-      <h1>Hello, React con el Jeison</h1>
+      <h1>Hello, React con el Jei</h1>
     </div>
   );
 }
