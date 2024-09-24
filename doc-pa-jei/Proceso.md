@@ -134,3 +134,62 @@ No, para poder usarlo necesitamos implementar los scripts de ejecución en el pa
 ```
 
 Ahora con "npm start" iniciaras el servidor y con "npm run build" Empaquetaras los archivos y los optimizaras para el modo de producción, **pero todavia no los puedes usar, así que esperate para los siguientes pasos**
+
+## Creando el archivo "index.html"
+
+Este si es el archivo el que le da vida al proyecto, aqui implementaremos la carga de la aplicación, en este archivo generaremos el "ancla" para que react pueda cargar nuestro componentes y nuestro código de js, el cual estara en la carpeta (que tenemos que crear) "src/index.html". Lo necesario es generar el div de id"root" el cual sera el pundo de entrada de react, y se deberia ver asi:
+
+```html
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>React App</title>
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
+```
+
+#### ¿Por qué usamos el id="root"?
+
+El ID root es el lugar donde React "controla" el DOM. En React, no interactuamos directamente con el DOM como lo haríamos con JavaScript puro o jQuery, sino que usamos el sistema de componentes de React para describir cómo debería verse la interfaz, y React actualiza el DOM de manera eficiente.
+
+## Creando el archivo index.js
+
+Ahora que tenemos el HTML listo, necesitamos el código JavaScript que React usará para generar y actualizar la interfaz de usuario. Crearemos un archivo index.js como punto de entrada para nuestra aplicación.
+
+1. Crear el archivo index.js:
+
+Dentro de la carpeta src, crea un archivo llamado index.js con el siguiente contenido:
+
+```js
+import React from "react";
+import ReactDOM from "react-dom/client";
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+
+function App() {
+  return (
+    <div>
+      <h1>Hello, React!</h1>
+    </div>
+  );
+}
+
+root.render(<App />);
+```
+
+Desglose del archivo:
+
+- import React from 'react';: Importa React, que es necesario para utilizar JSX (JavaScript XML) y construir componentes.
+- import ReactDOM from 'react-dom/client';: Importa ReactDOM, que se encarga de montar los componentes de React en el DOM. El método createRoot es usado para iniciar el punto de entrada a la aplicación.
+- ReactDOM.createRoot(document.getElementById('root'));: Con esto, seleccionamos el div con id="root" en el HTML como el lugar donde montaremos nuestra aplicación.
+- function App(): Definimos un componente funcional llamado App, que es la unidad básica de React. Este componente retorna un bloque JSX que representa la UI que queremos mostrar.
+- root.render(<App />);: Este comando renderiza el componente App dentro del div con ID root. En este caso, el componente App muestra un encabezado h1 con el texto "Hello, React!".
+
+#### 2. ¿Qué es un componente en React?
+
+Un componente es una función o clase que retorna un fragmento de la interfaz de usuario (UI). Los componentes son reutilizables y permiten dividir la interfaz en partes pequeñas y manejables. En nuestro caso, App es un componente funcional que genera una parte de la interfaz, y podemos crear muchos más componentes dentro de nuestra aplicación.
