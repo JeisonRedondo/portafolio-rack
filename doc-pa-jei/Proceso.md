@@ -256,3 +256,44 @@ root.render(<App />);
 Explicación del cambio:
 
 import App from './App';: Importa el componente App que acabamos de crear. Ahora el archivo index.js está más limpio y centrado en la inicialización de la aplicación.
+
+## Agregando estilos básicos
+
+Ahora para completar apropiadamente un proyecto desde cero con reactm, implementaremos unos estilos muy básicos, crearemos un archivo para el css dentro de la carpeta "src/styles/", aqui crearemos un archivo al cuál llamaremos "styles.css", que tendra el siguiente contenido:
+
+```css
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+h1 {
+  color: #333;
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+```
+
+Explicación:
+
+Establecemos una fuente básica y eliminamos márgenes y padding del body.
+Estilos simples para el encabezado (h1) y los párrafos (p) para que la aplicación se vea mejor visualmente.
+
+**Para que estos estilos se apliquen es necesario importar el archivo en el index.js:**
+
+```js
+import "./styles/styles.css"; // Importamos los estilos CSS
+import React from "react";
+import ReactDOM from "react-dom/client";
+import App from "./App";
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(<App />);
+```
+
+#### Con esto podriamos dar por terminada la creación del proyecto desde cero con react, ahora puedes usarlo para lo que desees, buena suerte.
