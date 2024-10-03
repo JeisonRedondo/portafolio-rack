@@ -193,3 +193,66 @@ Desglose del archivo:
 #### 2. ¿Qué es un componente en React?
 
 Un componente es una función o clase que retorna un fragmento de la interfaz de usuario (UI). Los componentes son reutilizables y permiten dividir la interfaz en partes pequeñas y manejables. En nuestro caso, App es un componente funcional que genera una parte de la interfaz, y podemos crear muchos más componentes dentro de nuestra aplicación.
+
+## Organizar la estructura de <carpetas>
+
+Conforme vamos avanzando en el proyecto, debemos tener claro como vamos a organizar el proyecto, existen varias metodologias para mantener claro el flujo de construcción del proyecto así como arquitecturas para organizar los archivos en el mismo. Por el momento generaremos la arquitectura que tiene por defecto react la cual es así:
+
+```bash
+src/
+├── components/
+├── styles/
+├── App.js
+├── index.js
+└── index.html
+```
+
+Desglose de la estructura:
+
+- components/: Aquí es donde guardarás los componentes React. Cada componente es una pieza reutilizable de la interfaz. A medida que tu aplicación crezca, puedes crear subcarpetas adicionales según lo necesites.
+- styles/: En esta carpeta puedes colocar tus archivos CSS para mantener los estilos separados del código JavaScript. Alternativamente, puedes usar CSS-in-JS o alguna solución de estilo en línea, pero por ahora usaremos archivos CSS simples.
+- App.js: Este es el archivo donde escribiremos el componente principal de la aplicación. Lo llamaremos App, y desde aquí puedes manejar la navegación o incluir otros componentes.
+- index.js: El punto de entrada principal para la aplicación, que ya hemos configurado. Aquí es donde se inicia React y donde se renderiza el componente App en el DOM.
+- index.html: Ya lo tenemos configurado y contiene el punto de montaje de nuestra aplicación.
+
+## Creando el archivo App.js
+
+Si queremos mantener un orden adecuado es necesario darle a cada parte del proyecto su propio espacio, el componente "App.js" no es la excepción, por eso lo llevaremos a un archivo aparte para poder manejarlo y/o usarlo dado sea necesario. Este archivo lo generaremos en la carpeta "src" y este sera el código que agregaremos:
+
+```js
+import React from "react";
+
+function App() {
+  return (
+    <div>
+      <h1>Welcome to my React App!</h1>
+      <p>This is a basic React setup from scratch.</p>
+    </div>
+  );
+}
+
+export default App;
+```
+
+Explicación del código:
+
+import React from 'react';: Necesitamos importar React en cada archivo donde vayamos a usar JSX (HTML dentro de JavaScript).
+function App(): Este es un componente funcional, que simplemente retorna una estructura JSX que describe lo que queremos que se muestre en la página.
+export default App;: Exporta el componente App, permitiendo que otros archivos lo importen y lo usen.
+
+### Actualizando index.js
+
+Al generar un archivo aparte para index.js necesitaremos modificar el index.js teniendo en cuenta la imoprtación de App.js:
+
+```js
+import React from "react";
+import ReactDOM from "react-dom/client";
+import App from "./App"; // Importamos el componente App
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(<App />);
+```
+
+Explicación del cambio:
+
+import App from './App';: Importa el componente App que acabamos de crear. Ahora el archivo index.js está más limpio y centrado en la inicialización de la aplicación.
