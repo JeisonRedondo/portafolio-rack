@@ -9,7 +9,7 @@ Este proyecto es una aplicación de React desarrollada con Webpack y Babel desde
 
 ## Descripción
 
-Este proyecto fue hecho para practicar una creación totalmente desde ceto de un proyecto desde cero, pero como no quiero desperdiciarlo le dare forma a una idea que eh tenido desde hace tiempo.
+Este proyecto fue hecho para practicar una creación totalmente desde cero de un proyecto desde cero, pero como no quiero desperdiciarlo le dare forma a una idea que eh tenido desde hace tiempo.
 
 La aplicación cuenta con configuraciones básicas para React, Webpack, Babel y la estructura de carpetas necesaria para comenzar a desarrollar proyectos modernos de frontend con JavaScript. Este proyecto incluye instrucciones detalladas para la instalación y uso, asegurando que cualquier persona pueda iniciarlo rápidamente.
 
@@ -18,13 +18,13 @@ La aplicación cuenta con configuraciones básicas para React, Webpack, Babel y 
 1. Clona este repositorio:
 
    ```bash
-   git clone https://github.com/tuusuario/tu-proyecto.git
+   git clone https://github.com/JeisonRedondo/portafolio-rack.git
    ```
 
 2. Navega al directorio del proyecto:
 
    ```bash
-   cd tu-proyecto
+   cd portafolio-rack
    ```
 
 3. Instala las dependencias:
