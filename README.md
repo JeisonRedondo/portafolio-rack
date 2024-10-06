@@ -35,16 +35,18 @@ La aplicación cuenta con configuraciones básicas para React, Webpack, Babel y 
 ## Uso
 
 Para iniciar la aplicación en modo de desarrollo, ejecuta:
-`bash
+
+```bash
     npm run start
-    `
+```
 
 ## Construcción
 
 Para crear una versión lista para producción, ejecuta:
-`bash
+
+```bash
     npm run build
-    `
+```
 
 ## Contribuir
 

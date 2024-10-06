@@ -19,9 +19,9 @@ npm install react react-dom
 
 ## Configuración de Babel y Webpack
 
-Empecemos por lo imoprtante, la mayoria de las veces cuando inicializamos un proyecto y vamos a mecha con el curso no tocamos fondo de algunos conceptos, quedamos en el limbo (o por lo menos así me paso a mi), entonces quedan cosas como "Bueno y esto pa' que sirve" - yo mirando el archivo de configuración de Babel...
+Empecemos por lo importante, la mayoria de las veces cuando inicializamos un proyecto y vamos a mecha con el curso, no tocamos fondo de algunos conceptos, quedamos en el limbo (o por lo menos así me paso a mi), entonces quedan cosas como "Bueno y esto pa' que sirve" - yo mirando el archivo de configuración de Babel...
 
-Así que decidido a que no me vuelva a pasar pregunte cuando hice este proyecto a GPT "Oye tu pa' que sirve esto" y me dijo, obviamente. Babel es un **Traspilador** , este intrepreta el código que hemos escrito y que ya sea por que tiene partes que no en todos los navegadores son compatibles o por el hecho ya que trabajamos con jsx, el cual por defecto no entiende el navegador, babel lo procesa para que este pueda ser visualizable y ejecutable en todos (o la mayoria) de los navegadores.
+Así que decidido a que no me vuelva a pasar, pregunte cuando hice este proyecto a GPT "Oye tu ¿pa' que sirve esto?" y me dijo, **obviamente**. Babel es un **Traspilador** , este intrepreta el código que hemos escrito y que ya sea por que tiene partes que no en todos los navegadores son compatibles o por el hecho de que con React trabajamos con jsx, el cuál por defecto no entiende el navegador, babel lo procesa para que este pueda ser visualizable y ejecutable en todos (o la mayoria) de los navegadores.
 
 Aquí la linea de comandos que usamos para implementar Babel en nuestro proyecto:
 
